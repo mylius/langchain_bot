@@ -1,0 +1,6 @@
+venv
+langchain_bot/data
+langchain_bot/.chroma
+langchain_bot/langchain_bot.egg-info
+.chroma
+*.log
