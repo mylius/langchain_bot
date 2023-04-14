@@ -2,7 +2,8 @@ import os
 
 import pydantic
 
-dir_name = os.path.workingdir()
+dir_name = os.getcwd()
+
 
 class Settings(pydantic.BaseSettings):
     openai_api_key: str
