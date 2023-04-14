@@ -1,6 +1,4 @@
-import os
-
-from langchain import document_loaders, OpenAI, VectorDBQA
+from langchain import document_loaders, OpenAI
 from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain.text_splitter import CharacterTextSplitter
 from langchain.vectorstores import Chroma
@@ -9,16 +7,12 @@ from langchain.chains import ConversationalRetrievalChain
 from langchain.prompts.chat import (
     ChatPromptTemplate,
     SystemMessagePromptTemplate,
-    AIMessagePromptTemplate,
     HumanMessagePromptTemplate,
 )
-from langchain.schema import (
-    AIMessage,
-    HumanMessage,
-    SystemMessage
-)
 
-OPENAI_API_KEY = "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"
+from langchain_bot.helpers.settings import settings
+
+OPENAI_API_KEY = settings.openai_api_key
 
 class SingletonMeta(type):
     _instances = {}
